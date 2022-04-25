@@ -2,19 +2,17 @@
     <form @submit.prevent>
         <h4>Создание нового поста</h4>
 
-        <input        
-        v-model='post.title'     
-        class='input'
+        <my-input       
+        v-model='post.title'  
         type='text'
         placeholder='Название'
-        >
+        />
 
-        <input 
+        <my-input
         v-model='post.body'
-        class='input'
         type='text'
         placeholder='Описание поста'
-        >
+        />
 
         <my-button        
         style='align-self: flex-end; margin-top: 15px'
@@ -26,9 +24,9 @@
 </template>
 
 <script>
-import MyButton from './UI/MyButton.vue'
+
     export default {
-        components: { MyButton },
+
         data () {
             return {
                 post: {
@@ -58,13 +56,7 @@ import MyButton from './UI/MyButton.vue'
     box-sizing: border-box;
 }
 
-.input {
-    width: 100%;
-    border: 1px solid teal;
-    padding: 10px 15px;
-    margin-top: 15px;
-    border-radius: 5px;
-}
+
 .app {
     padding: 20px;
 }
