@@ -1,6 +1,7 @@
 <template>
     <div class='app'>
         <h1>Страница с постами</h1>
+        <input type='text' v-model.number='modificatorValue'>
         <my-button
         @click='showDialog'
         style='margin: 5px 0'
@@ -39,6 +40,7 @@ import MyDialog from './components/UI/MyDialog.vue'
                     {id: 4, title: 'JavaScript 4', body: 'Опсание поста 4' },
                 ],
                 dialogVisible: false,
+                modificatorValue: '',
             }
         },
         methods: {
