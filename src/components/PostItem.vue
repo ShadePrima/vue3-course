@@ -8,10 +8,9 @@
             <my-button
             @click='$emit("remove", post)'
             >
-            Удалить пост
+            Удалить
             </my-button>
-        </div>
-         
+        </div>         
     </div>
    
 </template>
