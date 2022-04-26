@@ -1,5 +1,7 @@
 # vue3-course
 
+This is my first vue cours 
+
 ## Project setup
 ```
 npm install
