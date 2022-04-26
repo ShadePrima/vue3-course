@@ -4,7 +4,8 @@
         @create='createPost'
         />
         <post-list 
-        :posts='posts'        
+        :posts='posts'
+        @remove='removePost'      
         />        
     </div>
 </template>
@@ -32,6 +33,9 @@ import PostList from '@/components/PostList.vue'
                 this.posts.push(post)
 
             }, 
+            removePost(post) {
+                this.posts = this.posts.filter(p => p.id !== post.id)
+            }
         }
     }
 </script>
