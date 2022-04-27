@@ -1,7 +1,6 @@
 <template>
     <div class='app'>
         <h1>Страница с постами</h1>
-        <input type='text' v-model.number='modificatorValue'>
         <my-button
         @click='showDialog'
         style='margin: 5px 0'
@@ -25,6 +24,7 @@
 import PostForm from '@/components/PostForm.vue'
 import PostList from '@/components/PostList.vue'
 import MyDialog from './components/UI/MyDialog.vue'
+import axios from 'axios'
 
     export default {
         components: {
@@ -33,12 +33,7 @@ import MyDialog from './components/UI/MyDialog.vue'
             },
         data () {
             return {
-                posts: [
-                    {id: 1, title: 'JavaScript', body: 'Опсание поста' },
-                    {id: 2, title: 'JavaScript 2', body: 'Опсание поста 2' },
-                    {id: 3, title: 'JavaScript 3', body: 'Опсание поста 3' },
-                    {id: 4, title: 'JavaScript 4', body: 'Опсание поста 4' },
-                ],
+                posts: [],
                 dialogVisible: false,
                 modificatorValue: '',
             }
@@ -54,7 +49,20 @@ import MyDialog from './components/UI/MyDialog.vue'
             },
             showDialog() {
                 this.dialogVisible = true
+            },
+            async fetchPosts () {
+                try {
+                    setTimeout(async() => {
+                        const response = await axios.get('https://jsonplaceholder.typicode.com/posts?_limit=10')
+                        this.posts = response.data
+                    }, 1000)
+                } catch (e) {
+                    alert('Error')
+                }
             }
+        },
+        mounted() {
+            this.fetchPosts()
         }
     }
 </script>
