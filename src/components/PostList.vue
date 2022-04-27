@@ -1,6 +1,6 @@
 <template>
     <div v-if='posts.length > 0'>
-        <h3>Список пользователей</h3>
+        <h3>Posting list</h3>
         <post-item 
         v-for='post in posts'
         :key='post.id'
@@ -9,7 +9,7 @@
         />
     </div>
     <h2 v-else style='color: teal; text-align: center'>
-        Список постов пуст
+        Posting list is empty
     </h2>
 </template>
 

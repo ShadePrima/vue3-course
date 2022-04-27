@@ -1,14 +1,14 @@
 <template>
     <div class='post'>
         <div>
-            <div><strong>Название:</strong>{{post.title}}</div>        
-            <div><strong>Описание:</strong>{{post.body}}</div> 
+            <div><strong>Name:</strong>{{post.title}}</div>        
+            <div><strong>Description:</strong>{{post.body}}</div> 
         </div>
         <div class="post__btns">
             <my-button
             @click='$emit("remove", post)'
             >
-            Удалить
+            Delete
             </my-button>
         </div>         
     </div>

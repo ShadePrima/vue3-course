@@ -1,11 +1,11 @@
 <template>
     <div class='app'>
-        <h1>Страница с постами</h1>
+        <h1>Posting list</h1>
         <my-button
         @click='showDialog'
         style='margin: 5px 0'
         >
-        Создать пост
+        Create post
         </my-button>
         <my-dialog v-model:show='dialogVisible'>
             <post-form
@@ -35,7 +35,7 @@ import axios from 'axios'
             return {
                 posts: [],
                 dialogVisible: false,
-                modificatorValue: '',
+
             }
         },
         methods: {
