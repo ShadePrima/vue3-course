@@ -2,7 +2,7 @@
 
 This is my first vue cours 
 You can see it by link
-https://vue3-course-nq6nusjah-shadeprima.vercel.app
+https://vue3-course-shadeprima.vercel.app
 
 
 ## Project setup
