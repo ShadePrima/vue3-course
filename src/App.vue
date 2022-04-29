@@ -82,7 +82,7 @@ import MySelect from './components/UI/MySelect.vue'
             this.fetchPosts()
         },
         
-          
+           
         watch: {
             selectedSort(newValue) {
                 this.posts.sort((post1, post2) => {
