@@ -1,5 +1,6 @@
 <template>
     <div class='post'>
+        <!-- <div class='post__id'>{{post.id}}</div> -->
         <div>
             <div><strong>Name:</strong>{{post.title}}</div>        
             <div><strong>Description:</strong>{{post.body}}</div> 
@@ -40,7 +41,14 @@
     min-width: 300px;
 }
 .post__btns {
-    display: flex;
-  
+    display: flex;  
+}
+
+.post__id {
+    display: flex; 
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid teal;
+    border-radius: 5px;
 }
 </style>
